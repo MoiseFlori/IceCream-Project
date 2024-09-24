@@ -4,8 +4,10 @@
   "description": "",
   "homepage": "https://goitacademy.github.io/parcel-project-template",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "start": "concurrently \"npm run parcel\" \"npm run serve\"",
+    "parcel": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /parcel-project-template/",
+    "serve": "browser-sync start --proxy 'localhost:1234' --no-notify --files 'src/**/*.html, src/**/*.css, src/**/*.scss, src/**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.0.1",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
     "posthtml-include": "^1.7.4",

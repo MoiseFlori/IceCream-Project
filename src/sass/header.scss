@@ -1,7 +1,7 @@
 /* Container General */
 .main-container {
   position: relative;
-  padding: 20px;
+  padding-left: 20px;
   height: 502px;
   background-color: rgba(255, 184, 202, 1);
 }
@@ -10,7 +10,6 @@
 .left-container {
   position: absolute;
   top: 8px;
-  left: 20px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -106,11 +105,17 @@
 /* Container Dreapta */
 .right-container {
   position: absolute;
-  top: 27px; /* Așezat pe aceeași linie cu logo-ul */
-  right: 20px; /* Burger menu-ul să fie la dreapta */
+  top: 27px;
+  right: 20px;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   z-index: 2;
+}
+.header-right-container {
+  display: flex;
+  align-items: center;
 }
 
 .icon-burger-menu {
@@ -130,46 +135,20 @@
 
 /* Media Query pentru Tablete și Dispozitive Mai Mari */
 @media screen and (min-width: 768px) {
-  .container {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .header {
+  .main-container {
     height: 416px;
+    padding-left: 32px;
   }
-
-  .buy-now-button {
-    font-size: 16px;
-    font-weight: 700;
-    width: 160px;
-    height: 44px;
-    margin-left: 32px;
+  .right-container {
+    top: 15px;
+    right: 32px;
   }
-  .buy-now-button {
-    background-color: #fff;
-    color: #d41443;
-    padding: 10px 20px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .buy-now-button:hover {
-    background-color: #d41443;
-    color: #fff;
-  }
-
-  .hero-content {
-    width: 162px;
-    top: 102px;
-    left: 32px;
-  }
-
   .hero-title {
+    padding-top: 20px;
     font-size: 22px;
     line-height: 25.19px;
+    width: 162px;
+    height: 80px;
   }
 
   .highlight {
@@ -177,13 +156,116 @@
     line-height: 30.77px;
   }
 
-  .ice-cream-cone {
-    right: 303px;
-    top: 80px;
-  }
-
-  .second-section {
+  .paragraph-icon-container {
     display: flex;
     align-items: center;
+  }
+
+  .milk-bottle {
+    padding-top: 20px;
+    display: block;
+    width: 152px;
+    height: 154px;
+  }
+  .description-and-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .description-paragraph {
+    width: 114px;
+    display: flex;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+  }
+  .arrow-right {
+    margin-top: 7px;
+    font-family: 'DM Sans', sans-serif;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: none;
+    color: rgba(212, 20, 67, 1);
+    background-color: #fff;
+    transition: background-color 250ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .ice-cream-image {
+    > svg {
+      inset: -37px auto auto -74px;
+      width: 335px;
+      height: 333px;
+    }
+    > img {
+      width: 143px;
+    }
+    right: 303px;
+    height: 336px;
+    top: 80px;
+  }
+  .buy-now-container {
+    display: flex;
+  }
+
+  .buy-now-button {
+    border-radius: 20px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(212, 20, 67, 1);
+    transition: background-color 250ms ease-in-out;
+    width: 160px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms ease-in-out;
+    margin-left: 32px;
+  }
+  .buy-now-button:hover {
+    color: #fff;
+    background-color: rgba(212, 20, 67, 1);
+  }
+
+  .stats-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .cafes-number {
+    width: 43px;
+    height: 44px;
+  }
+
+  .food-truck-number {
+    width: 51px;
+    height: 43px;
+  }
+
+  .person-container {
+    display: flex;
+  }
+  .person-image {
+    margin-top: 87px;
+    width: 190px;
+    height: 150px;
   }
 }

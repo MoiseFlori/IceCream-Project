@@ -1,4 +1,4 @@
-<header class="main-container">
+<header class="main-container container">
   <!-- Container Stânga: Informații despre brand și produse -->
   <div class="left-container">
     <div class="logo-container">
@@ -10,7 +10,9 @@
     </div>
 
     <div class="title-container">
-      <h1 class="hero-title">Ice Cream Made with <span class="highlight">Passion</span></h1>
+      <h1 class="hero-title">
+        Ice Cream Made with <span class="highlight">Passion</span>
+      </h1>
     </div>
 
     <div class="buttons-container">
@@ -19,8 +21,24 @@
     </div>
 
     <div class="paragraph-icon-container">
-      <img src="./images/header/milk-bottle1x.png" alt="Milk Bottle" class="milk-bottle" />
-      <p class="description-paragraph">Indulge in a scoop of ice cream made with passion and treat your taste buds to an unforgettable experience!</p>
+      <picture>
+        <source
+          srcset="./images/header/milk-bottle2x.png"
+          media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+        />
+        <img
+          src="./images/header/milk-bottle1x.png"
+          alt="Milk Bottle"
+          class="milk-bottle"
+        />
+      </picture>
+      <div class="description-and-button-container">
+        <p class="description-paragraph">
+          Indulge in a scoop of ice cream made with passion and treat your taste
+          buds to an unforgettable experience!
+        </p>
+        <button type="button" class="arrow-right">></button>
+      </div>
     </div>
   </div>
 
@@ -30,39 +48,49 @@
       <svg class="pink-circle">
         <use href="./images/icons.svg#pink-circle" />
       </svg>
-      <img src="./images/header/icecream-cone-header.avif" alt="Ice cream cone" class="ice-cream-cone" />
+      <img
+        src="./images/header/icecream-cone-header.avif"
+        alt="Ice cream cone"
+        class="ice-cream-cone"
+      />
     </div>
   </div>
 
   <!-- Container Dreapta: Elemente vizuale suplimentare și Call-to-Action -->
   <div class="right-container">
-    <div class="burger-container">
-      <svg class="icon-burger-menu">
+    <div class="header-right-container">
+      <div class="burger-container">
+        <svg class="icon-burger-menu">
           <use href="./images/icons.svg#icon-burger-menu"></use>
         </svg>
-       </div>
-    <div class="buy-now-container">
-      <button class="buy-now-button">Buy Now ></button>
+      </div>
+      <div class="buy-now-container">
+        <button class="buy-now-button">Buy Now ></button>
+      </div>
     </div>
-
     <div class="stats-container">
       <div class="stat">
         <svg class="cafes-number">
           <use href="./images/icons.svg#cafe-number-header"></use>
         </svg>
-        <p>16 cafes</p>
-      </div>
-
-      <div class="stat">
         <svg class="food-truck-number">
           <use href="./images/icons.svg#food-truck-number-header"></use>
         </svg>
-        <p>23 food trucks</p>
       </div>
     </div>
 
     <div class="person-container">
-      <img src="./images/header/tasty1x.png" alt="Woman eating ice cream" class="person-image" />
+      <picture>
+        <source
+          srcset="./images/header/tasty2x.png"
+          media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"
+        />
+        <img
+          src="./images/header/tasty1x.png"
+          alt="Woman eating ice cream"
+          class="person-image"
+        />
+      </picture>
     </div>
   </div>
 </header>
