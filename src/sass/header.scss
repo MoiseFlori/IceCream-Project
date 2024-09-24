@@ -1,0 +1,189 @@
+/* Container General */
+.main-container {
+  position: relative;
+  padding: 20px;
+  height: 502px;
+  background-color: rgba(255, 184, 202, 1);
+}
+
+/* Container Stânga */
+.left-container {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.logo-svg {
+  width: 199px;
+  height: 50px;
+}
+
+.hero-title {
+  padding-top: 136px;
+  width: 218px;
+  height: 106px;
+  font-family: 'Titan One', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 29.77px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+.highlight {
+  font-family: 'Titan One', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 46.32px;
+  color: rgba(212, 20, 67, 1);
+}
+
+.buttons-container {
+  display: flex;
+  gap: 8px;
+  padding-top: 20px;
+}
+
+.products-button,
+.how-made-button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 10.42px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  color: rgba(212, 20, 67, 1);
+  transition: background-color 250ms ease-in-out;
+}
+
+.products-button:hover,
+.how-made-button:hover {
+  background-color: #d41443;
+  color: #fff;
+}
+
+.paragraph-icon-container,
+.milk-bottle,
+.description-paragraph {
+  display: none;
+}
+
+/* Container Centru */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ice-cream-image {
+  position: absolute;
+  right: 32px;
+  top: 100px;
+
+  > svg {
+    position: absolute;
+    inset: -9px auto auto -81px;
+    width: 346px;
+    height: 344px;
+  }
+
+  > img {
+    position: relative;
+    width: 171px;
+  }
+}
+
+/* Container Dreapta */
+.right-container {
+  position: absolute;
+  top: 27px; /* Așezat pe aceeași linie cu logo-ul */
+  right: 20px; /* Burger menu-ul să fie la dreapta */
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.icon-burger-menu {
+  width: 20px;
+  height: 12px;
+  border: 1px;
+}
+
+.buy-now-container {
+  display: none;
+}
+
+.stats-container,
+.person-container {
+  display: none;
+}
+
+/* Media Query pentru Tablete și Dispozitive Mai Mari */
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .header {
+    height: 416px;
+  }
+
+  .buy-now-button {
+    font-size: 16px;
+    font-weight: 700;
+    width: 160px;
+    height: 44px;
+    margin-left: 32px;
+  }
+  .buy-now-button {
+    background-color: #fff;
+    color: #d41443;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .buy-now-button:hover {
+    background-color: #d41443;
+    color: #fff;
+  }
+
+  .hero-content {
+    width: 162px;
+    top: 102px;
+    left: 32px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    line-height: 25.19px;
+  }
+
+  .highlight {
+    font-size: 34px;
+    line-height: 30.77px;
+  }
+
+  .ice-cream-cone {
+    right: 303px;
+    top: 80px;
+  }
+
+  .second-section {
+    display: flex;
+    align-items: center;
+  }
+}
