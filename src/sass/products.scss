@@ -1,8 +1,7 @@
 .products-section {
   width: 100%;
   display: block;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   box-sizing: border-box;
 }
 
@@ -11,8 +10,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .section-title-container {
@@ -21,24 +19,23 @@
   align-items: center;
 }
 
-.subsection-title {
+.subsection-title,
+.section-title {
   font-family: 'Titan One';
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 20.61px;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 400;
+}
+.subsection-title {
+  font-size: 18px;
+  line-height: 20.61px;
   color: rgba(255, 165, 186, 1);
   margin-top: 0;
   margin-bottom: 15px;
 }
 
 .section-title {
-  font-family: 'Titan One';
   font-size: 34px;
-  font-weight: 400;
-  text-align: center;
-  text-transform: uppercase;
   color: rgba(212, 20, 67, 1);
   margin-top: 0;
   margin-bottom: 150px;
@@ -47,9 +44,8 @@
 }
 
 .products-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 150px;
 }
 
@@ -99,6 +95,19 @@
   background-image: url('../images/products/home-pic3-1x.png');
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .product-item:nth-child(1)::before {
+    background-image: url('../images/products/home-pic1-2x.png');
+  }
+
+  .product-item:nth-child(2)::before {
+    background-image: url('../images/products/home-pic2-2x.png');
+  }
+
+  .product-item:nth-child(3)::before {
+    background-image: url('../images/products/home-pic3-2x.png');
+  }
+}
 .product-name::after {
   content: '...';
   display: block;
@@ -187,9 +196,10 @@
   }
 
   .products-cards {
-    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
+
   .product-item {
     width: 224px;
     height: 473px;
@@ -238,6 +248,7 @@
   }
 
   .products-cards {
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
   }
 
