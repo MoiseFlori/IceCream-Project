@@ -1,5 +1,8 @@
 /* Container General */
 .main-container {
+  display: flex;
+  align-items: center;
+  max-width: 320px;
   position: relative;
   padding-left: 20px;
   height: 502px;
@@ -79,10 +82,14 @@
 }
 
 /* Container Centru */
+
 .center-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.desktop-navbar {
+  display: none;
 }
 .ice-cream-image {
   position: absolute;
@@ -113,6 +120,7 @@
   align-items: flex-end;
   z-index: 2;
 }
+
 .header-right-container {
   display: flex;
   align-items: center;
@@ -136,12 +144,15 @@
 /* Media Query pentru Tablete și Dispozitive Mai Mari */
 @media screen and (min-width: 768px) {
   .main-container {
+    max-width: 768px;
     height: 416px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 32px;
   }
-  .right-container {
-    top: 15px;
-    right: 32px;
+  // left-container
+  .left-container {
+    top: 32px;
   }
   .hero-title {
     padding-top: 20px;
@@ -162,7 +173,7 @@
   }
 
   .milk-bottle {
-    padding-top: 20px;
+    padding-top: 10px;
     display: block;
     width: 152px;
     height: 154px;
@@ -170,9 +181,12 @@
   .description-and-button-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
   }
   .description-paragraph {
-    width: 114px;
+    width: 120px;
+    height: 48px;
     display: flex;
     font-family: 'DM Sans', sans-serif;
     font-size: 8px;
@@ -181,8 +195,7 @@
     text-align: left;
     color: rgba(255, 255, 255, 1);
   }
-  .arrow-right {
-    margin-top: 7px;
+  .arrow-right-button {
     font-family: 'DM Sans', sans-serif;
     width: 26px;
     height: 26px;
@@ -193,7 +206,7 @@
     transition: background-color 250ms ease-in-out;
     cursor: pointer;
   }
-
+  //  center-container
   .ice-cream-image {
     > svg {
       inset: -37px auto auto -74px;
@@ -205,8 +218,15 @@
     }
     right: 303px;
     height: 336px;
-    top: 80px;
+    top: 78px;
   }
+
+  // right-container
+  .right-container {
+    top: 32px;
+    right: 32px;
+  }
+
   .buy-now-container {
     display: flex;
   }
@@ -263,9 +283,132 @@
   .person-container {
     display: flex;
   }
+
   .person-image {
-    margin-top: 87px;
+    margin-top: 70px;
     width: 190px;
     height: 150px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .main-container {
+    max-width: 1280px;
+    height: 664px;
+  }
+  // left-container
+  .hero-title {
+    padding-top: 60px;
+    font-size: 38px;
+    line-height: 43.51px;
+    width: 277px;
+    height: 137px;
+  }
+
+  .highlight {
+    font-size: 58px;
+    line-height: 52.49px;
+  }
+
+  .buttons-container {
+    gap: 14px;
+    padding-top: 24px;
+  }
+
+  .products-button,
+  .how-made-button {
+    font-size: 14px;
+    line-height: 18.23px;
+    padding: 11px 22.63px 11px 23.66px;
+  }
+
+  .milk-bottle {
+    padding-top: 40px;
+    width: 213px;
+    height: 216px;
+  }
+
+  .description-and-button-container {
+    gap: 20px;
+  }
+  .description-paragraph {
+    width: 200px;
+    height: 78px;
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .arrow-right {
+    margin-top: 4%;
+  }
+
+  //  center-container
+  .desktop-navbar {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top: 52px;
+    left: 402px;
+    gap: 35px;
+    z-index: 3;
+  }
+
+  .desktop-navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20.83px;
+    transition: color 250ms ease-in-out;
+    text-align: left;
+  }
+  .desktop-navbar a:hover {
+    color: rgba(212, 20, 67, 1);
+  }
+
+  .ice-cream-image {
+    > svg {
+      inset: -54px auto auto -119px;
+      width: 534px;
+      height: 534px;
+    }
+    > img {
+      width: 236px;
+      height: 557px;
+    }
+    top: 107px;
+    right: 368px;
+    z-index: 1;
+  }
+
+  // right-container
+  .right-container {
+    top: 40px;
+    right: 36px;
+  }
+
+  .icon-burger-menu {
+    display: none;
+  }
+
+  .stat {
+    padding-top: 68px;
+    gap: 15px;
+  }
+
+  .cafes-number {
+    width: 72px;
+    height: 77px;
+  }
+
+  .food-truck-number {
+    width: 92px;
+    height: 76px;
+  }
+
+  .person-image {
+    margin-top: 103px;
+    width: 304px;
+    height: 241px;
   }
 }
