@@ -1,12 +1,15 @@
 /* Container General */
+
 .main-container {
   display: flex;
   align-items: center;
-  max-width: 320px;
+  min-width: 320px;
   position: relative;
   padding-left: 20px;
   height: 502px;
   background-color: rgba(255, 184, 202, 1);
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Container Stânga */
@@ -95,17 +98,19 @@
   position: absolute;
   right: 32px;
   top: 100px;
+  max-width: 100%;
 
   > svg {
     position: absolute;
     inset: -9px auto auto -81px;
-    width: 346px;
+    min-width: 346px;
     height: 344px;
   }
 
   > img {
     position: relative;
     width: 171px;
+    height: auto;
   }
 }
 
@@ -144,10 +149,8 @@
 /* Media Query pentru Tablete și Dispozitive Mai Mari */
 @media screen and (min-width: 768px) {
   .main-container {
-    max-width: 768px;
+    min-width: 768px;
     height: 416px;
-    margin-left: auto;
-    margin-right: auto;
     padding-left: 32px;
   }
   // left-container
@@ -156,15 +159,16 @@
   }
   .hero-title {
     padding-top: 20px;
-    font-size: 22px;
+    font-size: 2rem;
     line-height: 25.19px;
-    width: 162px;
+    min-width: 162px;
     height: 80px;
   }
 
   .highlight {
     font-size: 34px;
     line-height: 30.77px;
+    display: block;
   }
 
   .paragraph-icon-container {
@@ -286,22 +290,21 @@
 
   .person-image {
     margin-top: 70px;
-    width: 190px;
+    min-width: 190px;
     height: 150px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .main-container {
-    max-width: 1280px;
+    min-width: 1280px;
     height: 664px;
   }
   // left-container
   .hero-title {
     padding-top: 60px;
-    font-size: 38px;
     line-height: 43.51px;
-    width: 277px;
+    min-width: 277px;
     height: 137px;
   }
 
@@ -317,7 +320,7 @@
 
   .products-button,
   .how-made-button {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18.23px;
     padding: 11px 22.63px 11px 23.66px;
   }
@@ -346,8 +349,10 @@
     display: flex;
     position: absolute;
     align-items: center;
+    min-width: 541px;
     top: 52px;
-    left: 402px;
+    left: 50%;
+    transform: translateX(-50%);
     gap: 35px;
     z-index: 3;
   }
@@ -356,7 +361,7 @@
     text-decoration: none;
     color: #fff;
     font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 20.83px;
     transition: color 250ms ease-in-out;
@@ -397,12 +402,12 @@
   }
 
   .cafes-number {
-    width: 72px;
+    min-width: 72px;
     height: 77px;
   }
 
   .food-truck-number {
-    width: 92px;
+    min-width: 92px;
     height: 76px;
   }
 

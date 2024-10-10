@@ -1,5 +1,5 @@
 .about-section {
-  max-width: 320px;
+  min-width: 320px;
   padding-top: 60px;
   padding-bottom: 66px;
   box-sizing: border-box;
@@ -51,8 +51,8 @@
   flex-direction: column;
   background-image: url('../images/about/about-bg1x.png');
   background-repeat: no-repeat;
-  background-size: 280px 133px; /* Dimensiunea fundalului la 280px pe lățime */
-  background-position: 20px 402px; /* Poziționează fundalul la stânga și sus */
+  background-size: 280px 133px;
+  background-position: 20px 402px;
 }
 
 .about-image {
@@ -150,7 +150,7 @@
 
 @media screen and (min-width: 768px) {
   .about-section {
-    max-width: 768px;
+    min-width: 768px;
     padding-bottom: 205px;
     margin-left: auto;
     margin-right: auto;
@@ -184,6 +184,7 @@
 
   .about-description {
     flex-direction: row;
+    background-image: none;
     gap: 32px;
   }
 
@@ -268,13 +269,16 @@
 
 @media screen and (min-width: 1158px) {
   .about-section {
-    max-width: 1200px;
+    min-width: 1200px;
     padding-bottom: 203px;
   }
+
   .about-description {
+    align-items: center;
+    justify-content: center;
     background-image: url(../images/about/about-bg1x.png);
     background-repeat: no-repeat;
-    background-size: 1200px 521px; /* Setează dimensiunea backgroundului pentru desktop */
+    background-size: 1200px 521px;
     background-position: center -60px;
   }
 
